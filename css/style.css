@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -9,8 +9,8 @@
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 html {
@@ -250,7 +250,7 @@ section {
 .home .content h3 {
   font-size: 6rem;
   color: #219150;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   text-transform: uppercase;
 }
 
@@ -387,7 +387,7 @@ section {
   font-size: 1.7rem;
   background: #10221b;
   color: #fff;
-  margin: 0 .2rem;
+  margin: 0 0.2rem;
 }
 
 .shop .slide .image .icons a:hover {
@@ -406,7 +406,7 @@ section {
 
 .shop .slide .content .price {
   padding: 1rem 0;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   font-size: 2rem;
   color: #219150;
 }
@@ -414,6 +414,80 @@ section {
 .shop .slide .content .stars i {
   font-size: 1.7rem;
   color: #10221b;
+}
+
+.packages {
+  background: #eee;
+}
+
+.packages .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+
+.packages .box-container .box {
+  text-align: center;
+  border: 0.2rem solid black;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+}
+
+.packages .box-container .box:hover {
+  background: #10221b;
+}
+
+.packages .box-container .box:hover .content > * {
+  color: #fff;
+}
+
+.packages .box-container .box:hover .btn {
+  border-color: #fff;
+}
+
+.packages .box-container .box:hover .btn:hover {
+  background-color: #fff;
+  color: #10221b;
+}
+
+.packages .box-container .box .images {
+  height: 25rem;
+  overflow: hidden;
+  padding: 2rem;
+  padding-bottom: 0;
+  border-radius: .5rem;
+}
+
+.packages .box-container .box .images img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .5rem;
+}
+
+.packages .box-container .box .content {
+  padding: 2rem;
+}
+
+.packages .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+
+.packages .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.packages .box-container .box .content .price {
+  font-size: 2rem;
+  color: #219150;
 }
 
 @media (max-width: 1200px) {
@@ -504,6 +578,9 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .heading {
+    font-size: 3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
