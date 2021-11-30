@@ -374,74 +374,128 @@ section {
   }
 }
 .packages {
-    background: $light-bg;
+  background: $light-bg;
 
-    .box-container{
-        @include grid(32rem);
+  .box-container {
+    @include grid(32rem);
 
-        .box{
-            text-align: center;
-            border: $border;
-            box-shadow: $box-shadow;
-            border-radius: .5rem;
+    .box {
+      text-align: center;
+      border: $border;
+      box-shadow: $box-shadow;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background: $black;
+
+        .content > * {
+          color: $white;
+        }
+
+        .btn {
+          border-color: $white;
+
+          &:hover {
+            background-color: $white;
+            color: $black;
+          }
+        }
+      }
+
+      .images {
+        height: 25rem;
+        overflow: hidden;
+        padding: 2rem;
+        padding-bottom: 0;
+        border-radius: 0.5rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 0.5rem;
+        }
+      }
+      .content {
+        padding: 2rem;
+
+        h3 {
+          font-size: 2rem;
+          color: $black;
+        }
+
+        p {
+          font-size: 1.5rem;
+          color: $black;
+          padding: 1rem 0;
+          line-height: 2;
+        }
+
+        .price {
+          font-size: 2rem;
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+.services{
+     background: $light-bg;
+
+     .box-container{
+         @include grid(31rem);
+
+         .box{
+             text-align: center;
+             padding: 2rem;
+             border: $border;
+             border-radius: .5rem;
+             background: $white;
 
             &:hover{
-                background: $black;
+               background: $black; 
 
-                .content > *{
-                    color: $white;
-                }
+               img{
+                   filter:invert(1);
+               }
 
-                .btn{
+               h3{
+                   color:$white;
+               }
+
+               p{
+                   color: $white;
+               }
+
+               .btn{
                    border-color: $white;
+                   color: $white;
 
                    &:hover{
-                       background-color: $white;
+                       background: $white;
                        color: $black;
                    }
-                }
+               }
+
             }
-
-            .images{
-                height: 25rem;
-                overflow: hidden;
-                padding: 2rem;
-                padding-bottom: 0;
-                border-radius: .5rem;
-
-                img{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    border-radius: .5rem;
-                }            
-            }
-            .content{
-                padding:2rem;
-
-                h3{
-                    font-size: 2rem;
-                    color: $black;
-                }
-
-                p{
-                    font-size: 1.5rem;
-                    color: $black;
-                    padding: 1rem 0;
-                    line-height: 2;
-                }
-
-                .price{
-                    font-size: 2rem;
-                    color: $green;
-                }
-            }
-        }
-        }
-    }
-
-
-
+             img{
+                 height: 10rem;
+                 margin-bottom: 1rem;
+             }
+             h3{
+                 font-size: 2rem;
+                 color: $green;
+             }
+             p{
+                font-size: 1.5rem;
+                color: $black; 
+                padding: 1rem 0;
+                line-height: 2;
+             }
+         }
+     }
+}
 
 
 
